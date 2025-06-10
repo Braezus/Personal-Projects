@@ -1,4 +1,4 @@
-/* Updated style.css for full visual enhancement */
+/* Updated style.css with animations removed */
 
 body {
   font-family: 'Inter', sans-serif;
@@ -37,7 +37,7 @@ h2 {
 }
 
 section {
-  overflow: hidden;
+  overflow: visible;
 }
 
 p, li {
