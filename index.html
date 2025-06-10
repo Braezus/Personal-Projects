@@ -11,6 +11,7 @@
 <body class="loading">
   <div id="loader">Loading Brandon's Portfolio...</div>
 
+  <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌓</button>
   <header class="hero">
     <h1>Brandon D. Bailey</h1>
     <p>Graduate Student • Technology Analyst • Cloud Computing Enthusiast</p>
@@ -78,6 +79,17 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const toggle = document.getElementById("darkModeToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+    });
+
+    if (localStorage.getItem("darkMode") === "true") {
+      document.body.classList.add("dark-mode");
+    }
+  </script>
   <script>
     window.addEventListener("load", () => {
       document.body.classList.remove("loading");
