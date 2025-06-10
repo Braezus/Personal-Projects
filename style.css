@@ -1,4 +1,4 @@
-/* Updated style.css with animations removed */
+/* Updated style.css with better layout consistency and mobile improvements */
 
 body {
   font-family: 'Inter', sans-serif;
@@ -12,45 +12,46 @@ body {
 header.hero {
   background: #222;
   color: white;
-  padding: 60px 20px;
+  padding: 4rem 1.25rem;
   text-align: center;
 }
 
 header.hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 main {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 h2 {
   font-size: 1.75rem;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
   color: #222;
   border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
 }
 
 section {
   overflow: visible;
+  margin-bottom: 2rem;
 }
 
 p, li {
   font-size: 1rem;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 ul {
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 
 ul li {
-  margin-bottom: 10px;
+  margin-bottom: 0.75rem;
   list-style-type: disc;
 }
 
@@ -65,7 +66,7 @@ a:hover {
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 1.25rem;
   background-color: #222;
   color: white;
   font-size: 0.9rem;
@@ -73,8 +74,8 @@ footer {
 
 .resume-btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 1.25rem;
+  padding: 0.625rem 1.25rem;
   background-color: #007acc;
   color: white;
   border-radius: 5px;
@@ -93,7 +94,7 @@ footer {
   }
 
   main {
-    padding: 20px 10px;
+    padding: 1.25rem 0.625rem;
   }
 
   h2 {
