@@ -36,6 +36,10 @@ h2 {
   padding-bottom: 10px;
 }
 
+section {
+  overflow: hidden;
+}
+
 p, li {
   font-size: 1rem;
   margin-bottom: 15px;
@@ -98,5 +102,9 @@ footer {
 
   p, li {
     font-size: 0.95rem;
+  }
+
+  section {
+    overflow: visible;
   }
 }
