@@ -10,6 +10,11 @@
   <style>
     html, body {
       overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #111;
     }
     #loader {
       position: fixed;
@@ -24,10 +29,52 @@
       justify-content: center;
       z-index: 9999;
       font-size: 1.5em;
-      font-family: 'Inter', sans-serif;
     }
     body.loading *:not(#loader) {
       display: none !important;
+    }
+    header.hero {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #222;
+      color: #fff;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      padding-left: 1.25rem;
+    }
+    .resume-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #0073e6;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: #fff;
+    }
+    a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -80,8 +127,8 @@
       <h2>Contact</h2>
       <p>Let’s connect professionally:</p>
       <ul>
-        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:bbailey8899@gmail.com">Gmail</a></li>
-        <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">Brandon Bailey's LinkedIn</a></li>
+        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:bbailey8899@gmail.com">bbailey8899@gmail.com</a></li>
+        <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/bbailey8899" target="_blank">Brandon Bailey's LinkedIn</a></li>
       </ul>
       <a href="Brandon_Bailey_Resume.pdf" class="resume-btn" download>📄 Download My Resume</a>
     </section>
