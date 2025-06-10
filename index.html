@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     html, body {
       overflow-x: hidden;
@@ -35,18 +34,18 @@
 <body class="loading">
   <div id="loader">Loading Brandon's Portfolio...</div>
 
-  <header class="hero" data-aos="fade-down" data-aos-delay="100">
+  <header class="hero">
     <h1>Brandon D. Bailey</h1>
     <p>Graduate Student • Technology Analyst • Cloud Computing Enthusiast</p>
   </header>
 
   <main>
-    <section data-aos="fade-up" data-aos-delay="200">
+    <section>
       <h2>About Me</h2>
       <p>Hello Everyone, I am an ambitious IT professional with a strong foundation in Information Technology...</p>
     </section>
 
-    <section data-aos="fade-right" data-aos-delay="300">
+    <section>
       <h2>Technical Skills</h2>
       <ul>
         <li><strong>Cloud Platforms & IaC:</strong> AWS (EC2, Lambda, S3, RDS), Azure, GCP, Terraform, Ansible, AWS CLI, Azure CLI</li>
@@ -65,19 +64,19 @@
       </ul>
     </section>
 
-    <section data-aos="fade-left" data-aos-delay="400">
+    <section>
       <h2>Professional Experience</h2>
       <ul>
         <li><strong>Technology Analyst Intern – New York Life</strong><br>Contributed to enterprise-scale technology initiatives...</li>
       </ul>
     </section>
 
-    <section data-aos="fade-up" data-aos-delay="500">
+    <section>
       <h2>Career Goals</h2>
       <p>I am actively pursuing a full-time opportunity in Cloud Engineering or IT Infrastructure...</p>
     </section>
 
-    <section data-aos="zoom-in" data-aos-delay="600">
+    <section>
       <h2>Contact</h2>
       <p>Let’s connect professionally:</p>
       <ul>
@@ -88,22 +87,15 @@
     </section>
   </main>
 
-  <footer data-aos="fade-in" data-aos-delay="700">
+  <footer>
     <p>© 2025 Brandon D. Bailey</p>
   </footer>
 
   <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-
     window.addEventListener("load", () => {
       document.body.classList.remove("loading");
       document.getElementById("loader").style.display = "none";
-      AOS.refresh();
     });
   </script>
 </body>
