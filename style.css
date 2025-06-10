@@ -1,4 +1,4 @@
-/* Updated style.css with better layout consistency and mobile improvements */
+/* Updated style.css with dark mode support and toggle button styling */
 
 body {
   font-family: 'Inter', sans-serif;
@@ -7,6 +7,37 @@ body {
   color: #333;
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+body.dark-mode {
+  background-color: #111;
+  color: #f0f0f0;
+}
+
+body.dark-mode header.hero {
+  background: #1c1c1c;
+  color: #f0f0f0;
+}
+
+body.dark-mode a {
+  color: #4ea8de;
+}
+
+body.dark-mode footer {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+}
+
+#darkModeToggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10000;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #444;
 }
 
 header.hero {
