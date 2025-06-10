@@ -1,15 +1,57 @@
-/* Base styling */
+/* Updated style.css for full visual enhancement */
+
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f9f9f9;
   margin: 0;
-  padding: 0 20px;
+  background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header.hero {
+  background: #222;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #222;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+p, li {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  list-style-type: disc;
 }
 
 a {
-  color: #0077cc;
+  color: #007acc;
   text-decoration: none;
 }
 
@@ -17,92 +59,44 @@ a:hover {
   text-decoration: underline;
 }
 
-h1, h2 {
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #1a1a1a;
-}
-
-/* Header */
-header.hero {
-  background-color: #1e1e2f;
-  text-align: center;
-  padding: 40px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-header.hero h1,
-header.hero p {
-  color: white;
-}
-
-/* Section layout */
-main section {
-  background: white;
-  margin: 30px auto;
-  padding: 20px 25px;
-  border-radius: 8px;
-  max-width: 900px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-main section ul {
-  padding-left: 20px;
-}
-
-main section ul li {
-  margin-bottom: 12px;
-}
-
-/* Resume Button */
-.resume-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-}
-
-.resume-btn:hover {
-  background-color: #005fa3;
-}
-
-/* Contact icons */
-section ul li i {
-  margin-right: 8px;
-  color: #0077cc;
-}
-
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  font-size: 0.85rem;
-  color: #777;
-  background: transparent;
+  background-color: #222;
+  color: white;
+  font-size: 0.9rem;
 }
 
-/* Responsive */
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #005c99;
+}
+
 @media (max-width: 768px) {
-  body {
-    padding: 10px;
+  header.hero h1 {
+    font-size: 2rem;
   }
 
-  header.hero {
-    padding: 30px 10px;
+  main {
+    padding: 20px 10px;
   }
 
-  main section {
-    padding: 15px;
+  h2 {
+    font-size: 1.5rem;
   }
 
-  .resume-btn {
-    width: 100%;
-    text-align: center;
+  p, li {
+    font-size: 0.95rem;
   }
 }
