@@ -21,3 +21,30 @@ if (toggle) {
   });
 }
 
+// Back-to-top button logic (visibility + click)
+const backToTopBtn = document.getElementById("backToTopBtn");
+if (backToTopBtn) {
+  const updateBackToTopVisibility = () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  };
+
+  window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+  updateBackToTopVisibility();
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+// Contact button scroll logic
+const contactButton = document.getElementById("contactButton");
+if (contactButton) {
+  contactButton.addEventListener("click", () => {
+    // This targets your Contact section (2nd from last section in <main>)
+    const contactSection = document.querySelector("main section:nth-last-child(2)");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+}
+
