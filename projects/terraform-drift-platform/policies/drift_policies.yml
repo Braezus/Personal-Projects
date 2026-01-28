@@ -1,0 +1,60 @@
+default:
+  severity: LOW
+  category: OTHER
+  recommendation: REVIEW
+
+rules:
+  # Security-sensitive changes in production environments
+  - name: prod_iam_role_drift
+    match:
+      resource_type: aws_iam_role
+      environments: ["prod"]
+    severity: HIGH
+    category: SECURITY
+    recommendation: REVIEW
+
+  - name: prod_security_group_broadening
+    match:
+      resource_type: aws_security_group
+      environments: ["prod"]
+      actions: ["update"]
+    conditions:
+      # Evaluated in code: if any CIDR becomes more permissive (e.g. 0.0.0.0/0)
+      network_widening: true
+    severity: CRITICAL
+    category: SECURITY
+    recommendation: REVIEW
+
+  # Non-production compute and scaling drift
+  - name: nonprod_asg_capacity
+    match:
+      resource_type: aws_autoscaling_group
+      environments: ["dev", "staging"]
+      actions: ["update"]
+    severity: MEDIUM
+    category: AVAILABILITY
+    recommendation: REVIEW
+
+  # Tag-only changes in non-prod environments can be auto-remediated
+  - name: nonprod_tag_only
+    match:
+      resource_type: "*"
+      environments: ["dev", "staging"]
+      actions: ["update"]
+    conditions:
+      tag_only: true
+    severity: LOW
+    category: OTHER
+    recommendation: AUTO_REMEDIATE
+
+  # S3 public access changes are always critical
+  - name: s3_public_access
+    match:
+      resource_type: aws_s3_bucket
+      environments: ["dev", "staging", "prod"]
+    conditions:
+      public_access_changed: true
+    severity: CRITICAL
+    category: SECURITY
+    recommendation: REVIEW
+

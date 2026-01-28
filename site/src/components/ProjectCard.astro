@@ -1,0 +1,26 @@
+---
+type Props = {
+  title: string;
+  description: string;
+  techStack: string[];
+  href: string;
+};
+
+const { title, description, techStack, href } = Astro.props;
+---
+
+<article class="project-card">
+  <h3 class="project-card-title">{title}</h3>
+  <p class="project-card-description">{description}</p>
+  <div class="tech-badges">
+    {techStack.map((tech) => (
+      <span class="tech-badge">{tech}</span>
+    ))}
+  </div>
+  <div class="button-row">
+    <a href={href}>
+      <button class="btn-primary" type="button">View Project</button>
+    </a>
+  </div>
+</article>
+

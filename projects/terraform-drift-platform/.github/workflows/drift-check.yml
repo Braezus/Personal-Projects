@@ -1,0 +1,33 @@
+name: Terraform Drift Check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *" # hourly
+
+jobs:
+  drift-check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/terraform-drift-platform
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r app/drift_scanner/requirements.txt
+          pip install -r app/cli/requirements.txt
+
+      - name: Run drift check (dev)
+        run: |
+          python app/cli/drift_check.py --env-path terraform/envs/dev
+

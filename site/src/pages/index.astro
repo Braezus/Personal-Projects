@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<BaseLayout title="Brandon Bailey · Portfolio" description="Terraform-focused platform engineering and cloud infrastructure projects.">
+  <section class="hero">
+    <div class="pill">Platform & Cloud Engineering</div>
+    <h1>Brandon D. Bailey</h1>
+    <p class="hero-subtitle">
+      Developer Engineer focused on cloud infrastructure, Terraform, and reliable platforms.
+      This portfolio highlights a production-style Terraform Drift Detection &amp; Auto-Remediation Platform.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Personal Projects</h2>
+    <p>
+      These are engineering-focused projects designed to look and operate like internal
+      enterprise platforms, not tutorials.
+    </p>
+    <div class="projects-grid">
+      <ProjectCard
+        title="Terraform Drift Detection & Auto-Remediation Platform"
+        description="Detects Terraform drift across AWS accounts, classifies severity using policies, records an audit trail in DynamoDB and S3, and supports approval-based remediation via GitHub workflows."
+        techStack={[
+          "Terraform",
+          "Python 3.11",
+          "AWS (DynamoDB, S3, SNS)",
+          "GitHub Actions"
+        ]}
+        href="/projects"
+      />
+    </div>
+  </section>
+</BaseLayout>
+

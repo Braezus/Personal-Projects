@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Projects · Terraform Drift Platform" description="Details for the Terraform Drift Detection & Auto-Remediation Platform.">
+  <section class="hero">
+    <div class="pill">Infrastructure Platform</div>
+    <h1>Terraform Drift Detection & Auto-Remediation Platform</h1>
+    <p class="hero-subtitle">
+      A production-style platform that detects when live AWS infrastructure diverges from
+      Terraform state, classifies severity with a policy engine, records an audit trail, and
+      supports approval-based remediation via GitHub workflows.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Project Summary</h2>
+    <p>
+      The platform runs Terraform plans in refresh-only mode across multiple AWS accounts, parses
+      JSON plans into typed models, and applies YAML-driven policies to assign severity and
+      recommended actions. It writes compact audit records to DynamoDB, full JSON reports to S3,
+      and sends structured notifications via SNS. Optional integration with GitHub Issues and
+      Actions adds a human approval layer for remediation.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Tech Stack</h2>
+    <p>
+      Terraform · Python 3.11 · AWS (DynamoDB, S3, SNS, IAM, Lambda) · GitHub Actions · YAML policy engine
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Architecture Overview</h2>
+    <p>
+      Scheduled drift scans run a Terraform plan with <code>-refresh-only -detailed-exitcode</code>.
+      When drift is detected, a JSON plan is generated and parsed into normalized drift items. A
+      policy engine classifies each change, and the result is persisted and published for
+      downstream consumers like chat, incident tools, or approval workflows.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Documentation</h2>
+    <p>These links point directly into the project documentation within this repository.</p>
+    <div class="button-row">
+      <a href="../projects/terraform-drift-platform/README.md">
+        <button class="btn-primary" type="button">Project README</button>
+      </a>
+      <a href="../projects/terraform-drift-platform/docs/architecture.md">
+        <button class="btn-ghost" type="button">Architecture</button>
+      </a>
+      <a href="../projects/terraform-drift-platform/docs/runbook.md">
+        <button class="btn-ghost" type="button">Runbook</button>
+      </a>
+      <a href="../projects/terraform-drift-platform/docs/threat_model.md">
+        <button class="btn-ghost" type="button">Threat Model</button>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
